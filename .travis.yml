@@ -4,7 +4,7 @@ python:
   - "3.6-dev" # 3.6 development branch
 install: 
   - "pip install cookiecutter rstcheck sphinx"
-  - "export HOME=pwd"
+  - "export GIT_HOME=pwd"
   - "cd .."
 
   - "cookiecutter cookiecutter-plumbum-cli --no-input -f"
@@ -13,7 +13,8 @@ install:
   - "travis_retry pip install -e ."
   - "deactivate"
   - "pwd"
-  - "cd $HOME"
+  - "set"
+  - "cd $GIT_HOME"
   - "pwd"
 script:
   - "pwd"
