@@ -6,7 +6,7 @@ install:
   - "pip install cookiecutter rstcheck sphinx"
   - "cd .."
   - "cookiecutter cookiecutter-plumbum-cli --no-input -f"
-  - "python -m venv .venv && source .venv/bin/activate && cd COOKIECUTTER__project-name"
+  - "virtualenv .venv -p python3 && source .venv/bin/activate && cd COOKIECUTTER__project-name"
   - "travis_retry pip install -e ."
   - "deactivate"
   - "cd .."

@@ -1,10 +1,8 @@
-"""helpers.py: tests global scratch space"""
-# TODO: move root/paths to pytest official global spaces
+"""helpers.py: tests global scratch space
+GENERATED: {{cookiecutter.author_name}} @ {% now 'utc' %} -- {{cookiecutter._template}}v{{cookiecutter.template_version}}
+"""
 from os import path
-
-import prosper.common.prosper_config as p_config
 
 HERE = path.abspath(path.dirname(__file__))
 ROOT = path.dirname(HERE)
 
-APP_CONFIG = p_config.ProsperConfig(path.join(ROOT, '{{cookiecutter.library_name}}', 'app.cfg'))

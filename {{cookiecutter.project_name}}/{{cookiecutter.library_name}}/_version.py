@@ -1,4 +1,9 @@
-"""_version.py: track package version information"""
+"""_version.py: track package version information
+
+NOTE: magic version helper from ProsperCommon
+
+GENERATED: {{cookiecutter.author_name}} @ {% now 'utc' %} -- {{cookiecutter._template}}v{{cookiecutter.template_version}}
+"""
 from os import path
 import warnings
 

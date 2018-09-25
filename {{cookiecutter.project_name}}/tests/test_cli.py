@@ -1,4 +1,6 @@
-"""test_cli: make sure user experiance works as expected"""
+"""test_cli: make sure user experiance works as expected
+GENERATED: {{cookiecutter.author_name}} @ {% now 'utc' %} -- {{cookiecutter._template}}v{{cookiecutter.template_version}}
+"""
 
 from plumbum import local
 import pytest
