@@ -6,17 +6,14 @@ install:
   - "pip install cookiecutter rstcheck sphinx"
   - "export GIT_HOME=`pwd`"
   - "cd .."
-
   - "cookiecutter cookiecutter-plumbum-cli --no-input -f"
   - "virtualenv .venv -p python3 && source .venv/bin/activate && cd COOKIECUTTER__project-name"
   - "export CC_HOME=`pwd`"
   - "travis_retry pip install -e ."
   - "deactivate"
-  - "pwd"
   - "cd $GIT_HOME"
-  - "pwd"
 script:
-  - "pwd"
+  - "which python"
   - "rstcheck ../COOKIECUTTER__project-name/README.rst"
   - "source ../.venv/bin/activate"
   - "cd $CC_HOME"
@@ -25,4 +22,3 @@ script:
   - "deactivate"
   - "sphinx-apidoc -f -o docs/source COOKIECUTTER__library_name"
   - "sphinx-build -b html docs/ webpage"
-
