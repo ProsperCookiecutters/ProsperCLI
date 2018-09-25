@@ -1,0 +1,21 @@
+language: python
+python:
+  - "3.6"
+  - "3.6-dev" # 3.6 development branch
+install: 
+  - "pip install cookiecutter rstcheck sphinx"
+  - "cd .."
+  - "cookiecutter cookiecutter-plumbum-cli --no-input -f"
+  - "python -m venv .venv && source .venv/bin/activate && cd COOKIECUTTER__project-name"
+  - "travis_retry pip install -e ."
+  - "deactivate"
+  - "cd .."
+script:
+  - "source ../.venv/bin/activate && \
+    python ../COOKIECUTTER__project-name/setup.py test && \
+    python ../COOKIECUTTER__project-name/setup.py sdist bdist_wheel && \
+    deactivate"
+  - "rstcheck ../COOKIECUTTER__project-name/README.rst"
+  - "sphinx-apidoc -f -o ../COOKIECUTTER__project-name/docs/source ../COOKIECUTTER__project-name/COOKIECUTTER__library_name"
+  - "sphinx-build -b html ../COOKIECUTTER__project-name/docs/ webpage"
+
