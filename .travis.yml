@@ -11,6 +11,7 @@ install:
   - "deactivate"
   - "cd .."
 script:
+  - "pwd"
   - "source ../.venv/bin/activate && \
     python ../COOKIECUTTER__project-name/setup.py test && \
     python ../COOKIECUTTER__project-name/setup.py sdist bdist_wheel && \
