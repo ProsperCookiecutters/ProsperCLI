@@ -13,7 +13,6 @@ install:
   - "travis_retry pip install -e ."
   - "deactivate"
   - "pwd"
-  - "set"
   - "cd $GIT_HOME"
   - "pwd"
 script:
