@@ -17,11 +17,12 @@ install:
   - "pwd"
 script:
   - "pwd"
-  - "source ../.venv/bin/activate && \
-    python ../COOKIECUTTER__project-name/setup.py test && \
-    python ../COOKIECUTTER__project-name/setup.py sdist bdist_wheel && \
-    deactivate"
   - "rstcheck ../COOKIECUTTER__project-name/README.rst"
-  - "sphinx-apidoc -f -o ../COOKIECUTTER__project-name/docs/source ../COOKIECUTTER__project-name/COOKIECUTTER__library_name"
-  - "sphinx-build -b html ../COOKIECUTTER__project-name/docs/ webpage"
+  - "source ../.venv/bin/activate"
+  - "cd $CC_HOME"
+  - "python setup.py test"
+  - "python setup.py sdist bdist_wheel"
+  - "deactivate"
+  - "sphinx-apidoc -f -o docs/source COOKIECUTTER__library_name"
+  - "sphinx-build -b html docs/ webpage"
 
