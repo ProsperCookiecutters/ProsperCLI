@@ -4,13 +4,16 @@ python:
   - "3.6-dev" # 3.6 development branch
 install: 
   - "pip install cookiecutter rstcheck sphinx"
+  - "pwd"
   - "cd .."
 
   - "cookiecutter cookiecutter-plumbum-cli --no-input -f"
   - "virtualenv .venv -p python3 && source .venv/bin/activate && cd COOKIECUTTER__project-name"
   - "travis_retry pip install -e ."
   - "deactivate"
+  - "pwd"
   - "cd -"
+  - "pwd"
 script:
   - "pwd"
   - "source ../.venv/bin/activate && \
