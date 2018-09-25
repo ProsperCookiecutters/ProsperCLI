@@ -1,3 +1,4 @@
+# GENERATED: {{cookiecutter.author_name}} @ {% now 'utc' %} -- {{cookiecutter._template}}v{{cookiecutter.template_version}}
 language: python
 python:
   - "3.6"

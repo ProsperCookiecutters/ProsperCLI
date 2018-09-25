@@ -1,3 +1,11 @@
+cookiecutter-plumbum-cli (1.1.0) stable; urgency=low
+  * Adds `GENERATED` information for auto-made pages
+  * Updates recipes to be py>=3.6 with f-strings
+  * Adds Sphinx for ReadTheDocs integration
+  * Adds badges to README.rst
+  * Updates TravisCI recipe for single-project
+ -- John Purcell <jpurcell.ee@gmail.com>  TBD
+
 prosper-cron (1.0.0) stable; urgency=low
   * Preliminary release
   * Adds CLI interface via `entry_points`

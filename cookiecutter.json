@@ -1,10 +1,11 @@
 {
-    "project_name":"PROSPERCLI__project_root",
-    "library_name":"PROSPERCLI__library_folder",
-    "cli_name":"PROSPERCLI__CLIApplicationName",
+    "project_name":"COOKIECUTTER__project-name",
+    "library_name":"COOKIECUTTER__library_name",
+    "cli_name":"CLIName",
     "author_name":"your name here",
     "author_email":"your@email.here",
     "github_name":"githubusername",
     "keywords":"describe your app space separated",
-    "project_brief":"describe what the cron does"
+    "project_brief":"describe what the cli does",
+    "template_version":"1.0.0"
 }
